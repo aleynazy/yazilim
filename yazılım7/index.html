@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>anasayfa</title>
+</head>
+    <body>
+      <h1>ABC Tasarım Programı Kurulum ve Satış Sözleşmesi</h1>
+    <form>
+        <fieldset>
+        <legend>Sözlşeme Onay</legend>
+        <input type="checkbox" name="onaylıyorum" value="onaylıyorum">Aşağıdaki bilgileri doğruluğunu kabul ediyorum ve sözleşmeyi onaylıyorum<br>
+        <input type="submit" value="formu kaydet">
+        <input type="reset" value="formu temizle">
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Kişisel Bilgiler</legend>
+            <label> Form <br>güvenlik ID:</label><input type="text" placeholder="abc" required ><br><br>
+            <label>Ad : </label><input type="name" placeholder="adınızı girin.." required><br><br>
+            <label>Soyad:</label><input type="text" placeholder="soyadınızı girin.." required><br><br>
+            <label>Yaş:</label><input type="number" required><br><br>
+            <label>Mail Adresi:</label><input type="email" placeholder="mailinizi girin.." required><br><br>
+            <label>Fotoğraf Ekle:</label><input type="file" value="dosya gönder"><br>
+            <input type="submit" value="kaydet">
+            <input type="reset" value="sil">
+         </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Diğer Bilgiler</legend>
+            <h4 >Buradaki Alanlar Mesleki Deneyimi Kapsar</h4><br>
+            <label>Sektöre Giriş Tarihi:</label><input type="date" required><br><br>
+            <label>Sektör Deneyimi:</label><input type="radio" name="secim" value="1-5 yıl">1-5yıl<br>
+            <input type="radio" name="secim" value="6-10 yıl">6-10yıl<br>
+            <input type="radio" name="secim" value="11-15 yıl">11-15 yıl<br>
+            <input type="radio" name="secim" value="15 ve üzeri">15 yıl üzeri<br>
+        
+            <label>Programlama Dilleri:</label>
+            <select name="p.Dilleri" multiple >
+                <option value="1">C#</option>
+                <option value="2">Java</option>
+                <option value="3">PHP</option>
+                <option value="4">HTML</option>
+                <option value="5">JavaScript</option>
+                <option value="6">CSS</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sözleşme Kopyası</legend>
+            <textarea rows="5" cols="50" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, enim. Esse quos exercitationem, pariatur sapiente autem debitis praesentium hic magnam. ipsum dolor sit amet consectetur, adipisicing elit. Sed deserunt qui enim saepe repellat voluptates consequatur voluptatibus odit ab debitis beatae, blanditiis velit possimus consequuntur rerum voluptate, fugiat earum molestiae. </textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mail Listesi</legend>
+            <label>Mail listesine katılmak <b>istiyorum</b></label><input type="radio" name="secim"><br><br>
+            <label>Mail listesine katılmak <b><u>istemiyorum</u></b></label><input type="radio" name="secim">
+        </fieldset>
+    </form>
+    
+    
+    </body>
+</html>
