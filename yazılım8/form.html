@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Sayfası</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h2 id="h2">Poster Tasarımları </h2>
+      <img id="poster1"  src="foto/poster1.jpeg">
+        </header>
+
+        <form>
+            <fieldset class="form" >
+            <legend>Bilgileriniz</legend>
+            <label>Ad Soyad:</label><input type="text" placeholder="Adınızı girin.." required><br>
+            <label>  E-mail:</label><input type="email" placeholder="e-mailinizi girin.." required><br>
+            <label>Telefon:</label><input type="tel" placeholder="Numaranızı girin.." required><br>
+            <label>Doğum Tarihi:</label><input type="date" required>
+            </fieldset>
+
+            <fieldset class="form">
+                <legend>Sevdikleriniz</legend>
+                <label>Sevdiğiniz Rengi Seçiniz</label>
+                <select name="renkler" size="1">
+                    <option value="1">Pembe</option>
+                    <option value="2">Mavi</option>
+                    <option value="3">Kırmızı</option>
+                    <option value="4">Mor</option>
+                    <option value="5" >Yeşil</option>
+                </select>
+
+                <label>Sevdiğiniz Hayvanı Seçiniz</label>
+                <select name="hayvanlar" multiple>
+                    <option value="h1">Kedi</option>
+                    <option value="h2">Köpek</option>
+                    <option value="h3">Tavşan</option>
+                    <option value="h4">Kaplumbağa</option>
+                    <option value="h5">Minik Yavru Ayıcık</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="form" >
+                <legend>Puanlama ve Yorum</legend>
+                <label>Genel olarak sayfa puanlamsı</label><br>
+                <input type="radio" name="secim" value="1">1<br>
+                <input type="radio" name="secim" value="1">2<br>
+                <input type="radio" name="secim" value="1">3<br>
+                <input type="radio" name="secim" value="1">4<br>
+                <input type="radio" name="secim" value="1">5<br>
+
+                <label>Yorumlarınız:</label>
+                <textarea rows="3" cols="20" tabindex="2"></textarea>
+
+            </fieldset>
+
+            <fieldset class="form">
+                <legend>Öneriniz</legend>
+                <label>Öneriniz olan herhangi bir posteri buraya yükleyebilirsiniz</label><br>
+                <input type="file">
+            </fieldset>
+        </form>
+    </body>
+
+</html>
