@@ -1,0 +1,43 @@
+body{
+    background-color: bisque;
+}
+
+div{
+    background-image: url(foto/arkaplan.jpeg);
+    height: 300px;
+    width: 200px;
+    float: left;
+    margin: 20px;
+    position: relative;
+    top: 250px;
+    left: 25%;
+    box-shadow: 0 -20px 10px -20px rgba(0,0,0,1) , -20px 0 10px -20px rgba(0,0,0,1) ;
+}
+
+div img{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+div h3{
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+div p{
+    color: white;
+    position: relative;
+    top: 10px;
+    left: 25px;
+}
+div pre{
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
