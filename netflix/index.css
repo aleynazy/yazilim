@@ -1,0 +1,152 @@
+body {
+    background-image:linear-gradient(black, transparent, rgb(16, 16, 16)),
+    url(images/poster.jpg);
+    background-repeat: no-repeat ;
+    background-size: 100% 100%;
+    
+}
+html{
+    height: 1500px;
+    background: linear-gradient(to top, rgb(28, 27, 27), black);
+}
+
+#logo{
+    height: 35px;
+    width: 90px;
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.div1{
+   float: left;
+   padding: 10px;
+   position: relative;
+   top: 10px;
+   left: 50px;
+   color: white;
+}
+
+#user{
+    height: 50px;
+    width: 50px;
+}
+
+.div2{
+    float: right;
+    padding-right: 40px;
+    position: relative;
+    top: 10px;
+    right: 50px;
+    color: white;
+    font-size: 25px;
+
+}
+#banner{
+    height: 200px;
+    position: relative;
+    top: 250px;
+    left: -450px;
+    
+}
+#Lorem{
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top:250px ;
+    left: 20px;
+}
+
+
+
+.oynat{
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    top: 300px;
+    left: 25px;
+    text-align: center;
+    height: 25px;
+    width: 125px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+
+}
+#eA{
+    color: white;
+    position: relative;
+    top: 500px;
+    right: 300px;
+}
+
+.sıra1{
+    height: 150px;
+    margin: 1px;
+    position: relative;
+    top: 500px;
+    left: 20px;
+}
+#gundemdekiler{
+    color: white;
+    position: relative;
+    top: 500px;
+    left: 20px;
+}
+.sıra2{
+    height: 150px;
+    margin: 1px;
+    position: relative;
+    top: 500px;
+    left: 20px;
+}
+.ikon2{
+    color: white;
+    font-size: 40px;
+    opacity: 0.6;
+    position: relative;
+    top: 600px;
+    left: 90px;
+}
+.list1{
+    font-size: 15px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 600px ;
+    left: 60px;
+    color: white;
+    opacity: 0.6;
+}
+
+.list2{
+    font-size: 15px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 520px ;
+    left: 350px;
+    color: white;
+    opacity: 0.6;
+}
+.list3{
+    font-size: 15px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 455px ;
+    left: 600px;
+    color: white;
+    opacity: 0.6;
+}
+.list4{
+    font-size: 15px;
+    list-style: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    top: 390px ;
+    left: 850px;
+    color: white;
+    opacity: 0.6;
+}
