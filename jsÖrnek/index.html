@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>anasayfa örnek</title>
+</head>
+<body>
+    <h2>JavaScript Değişken</h2>
+    <p>bu örnekte telefon olan bir değişken tanımlanıyor</p>
+    <p>daha sonra telefon değişkenine 444444 değeri atanıyor ve ekranda bu değer görüntüleniyor</p>
+    <p id="demo"></p>
+    <p id="demo2"> </p>
+    <p id="sayi"></p>
+    <p id="site"></p>
+    <p>1+2+3 işleminin sonucu:</p>
+    <p id="demo3"></p>
+    <p>Öğrencinin adı:</p>
+    <p id="demo4"></p>
+    <p>sayi1= 5, sayi2= 10, sayi1 ve sayi2'yi topla, çıkan sonucu toplam değişkenine ata</p>
+    <p id="demo5"></p>
+    <p>JavaScript değişken ve sabit sayı üzerinde işlem yapmak</p>
+    <p id="demo6"></p>
+
+<script>
+var telefon;
+telefon=444444;
+document.getElementById("demo").innerHTML=telefon;
+document.getElementById("demo2").innerHTML=(2+3)*10;
+
+var sayi=10;
+var site='uzmanim akademi';
+document.getElementById("sayi").innerHTML=sayi;
+document.getElementById("site").innerHTML=site;
+
+let sonuc= 1+2+3;
+document.getElementById("demo3").innerHTML=sonuc;
+
+let tamAd= "ali" + " "+ "veli";
+document.getElementById("demo4").innerHTML=tamAd;
+
+var sayi1=5;
+var sayi2=10;
+var toplam= sayi1 + sayi2;
+document.getElementById("demo5").innerHTML=toplam;
+
+var sayi1=10;
+var sayi2=5;
+var toplam= (sayi1 + sayi2)*2;
+document.getElementById("demo6").innerHTML=toplam;
+</script>
+</body>
+
+</html>
