@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anasayfa</title>
+        <style></style>
+    </head>
+<body>
+<p id="demo">min değer:</p>
+<p id="demo2">min değer:</p>
+<p id="demo3">min değer:</p>
+
+
+
+
+    <script>
+        let age= prompt("Yaşınız?");
+        alert('Yaşınız ' + [age] );
+
+
+
+        var a=2;
+        var b=5;
+        var bul= Math.min(a,b);
+        document.getElementById("demo").innerHTML=bul;
+
+        var a=3;
+        var b=-1;
+        var bul= Math.min(a,b);
+        document.getElementById("demo2").innerHTML=bul;
+
+        var a=1;
+        var b=1;
+        var bul= Math.min(a,b);
+        document.getElementById("demo3").innerHTML=bul;
+    </script>
+</body>
+</html>
