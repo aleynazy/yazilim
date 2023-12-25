@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anasayfa</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+<input type="button" value="not kontrol" onclick="kontrol()">
+<p id="sonuc">sonuç</p>
+<p id="demo"></p>
+
+
+        <script>
+             var vizeSonuc=prompt("Notunuzu girin.");
+            function kontrol(){
+               if(vizeSonuc < 60)
+                document.getElementById("sonuc").innerText="Kaldınız";
+            }  if (vizeSonuc > 60){
+                document.getElementById("sonuc").innerText="Geçtiniz";
+            }
+            
+
+            var x= 5;
+            var y=7;
+            var sonuc= 3.14 * x * x * 3.14 * y * y;
+            document.getElementById("demo").innerHTML=sonuc;
+
+        </script>
+    </body>
+</html>
