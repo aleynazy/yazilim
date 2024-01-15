@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swich</title>
+    </head>
+    <body>
+        <input type="button" onclick="hangiGun()" value="Kontrol Et">
+        <p id="demo"></p>
+
+
+        <script>
+         function hangiGun(){  
+            let a= +prompt('Hangi Gün?') 
+            switch (a){
+                case 0:
+                   document.getElementById("demo").innerHTML=("Pazar") ;
+                    break;
+                case 1:
+                document.getElementById("demo").innerHTML= ("Pazartesi");
+                   break;  
+                case 2:
+                document.getElementById("demo").innerHTML= ("Salı");
+                    break; 
+                case 3:
+                document.getElementById("demo").innerHTML= ("Çarşamba");
+                  break;
+                case 4:
+                document.getElementById("demo").innerHTML= ("Perşembe"); 
+                 break;
+                case 5:
+                document.getElementById("demo").innerHTML= ("Cuma"); 
+                  break;
+                case 6: 
+                document.getElementById("demo").innerHTML= ("Cumartesi");
+                break;  
+                }    
+            }
+        </script>
+    </body>
+</html>

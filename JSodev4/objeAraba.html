@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Araba🚘</title>
+    </head>
+    <body>
+        <script>
+
+    let Araba= {
+        marka: ("Mercedes"),
+        model: ("A180"),
+        renk:("kırmızı"),
+        uretimYili: 2018,
+        arabaDurumu: "Çalıştırılmadı",
+        calistir: function() {
+            this.arabaDurumu ="Çalıştırıldı";
+        return "Araba çalıştırıldı";
+        }
+    }
+
+    var arabaHizi ={
+        hiz1: 0,
+        hiz2: 60,
+        hiz3: 120,
+        topla: function(){
+            return this.hiz1 + this.hiz2;
+        },
+        topla1: function(){
+            return this.hiz1 + this.hiz3;
+        }
+    };
+    console.log(arabaHizi.hiz1, "başlangıç hızı");
+   console.log(arabaHizi.topla(), "Orta hız");
+   console.log(arabaHizi.topla1(), "en yüksek hız");
+
+
+   console.log(Araba.marka, Araba.model, Araba.renk, Araba.uretimYili);
+   console.log(Araba.arabaDurumu);
+   console.log(Araba.calistir());
+    
+        </script>
+    </body>
+</html>

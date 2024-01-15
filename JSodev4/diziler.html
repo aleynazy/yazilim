@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diziler</title>
+    </head>
+    <body>
+        <p>Meyve seçenekleri</p>
+        <p id="demo"></p>
+        <p id="liste">Alışveriş Listen</p>
+        <input type="button" onclick="mevcutListe()" value="Meyve seçeneklerini görüntüle"><br>
+        <input type="button" onclick="ekleme()" value="Meyve ekle">
+        <input type="button" onclick="cikarma()" value="Meyve Çıkarma">
+
+        <script>
+            function mevcutListe(){
+             let meyveler = ["Elma", "Armut", "Kavun", "Kivi"];
+             document.getElementById("demo").innerHTML=(meyveler);
+        }
+
+        function ekleme(){
+              let a= prompt("hangi meyveleri eklemek istiyorsun?"); //muz eklendi 
+              let meyveler = ["Elma", "Armut", "Kavun", "Kivi"];
+              meyveler.push("muz");
+              alert(meyveler)
+
+        }
+
+        function cikarma(){
+            let a= prompt("hangi meyveleri çıkarmak istiyorsun?"); //elma çıkarıldı 
+              let meyveler = ["Elma", "Armut", "Kavun", "Kivi"];
+               meyveler.shift();
+              alert(meyveler)
+
+        }
+        </script>
+    </body>
+</html>
