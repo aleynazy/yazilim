@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doğum gününe kalan zaman</title>
+        <style>
+            #demo{
+                color: rgb(144, 79, 108);
+                position: relative;
+                top: 170px;
+                left: 25px;
+                font-family: initial;
+                font-size: large;
+                
+            }
+            #demo2{
+                background-color: bisque;
+                height: 300px;
+                width: 300px;
+                border-radius: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <script>
+            var DgTarihi= new Date("march 5, 2025 17:30:05").getTime();
+            var x = setInterval(function(){
+                var now = new Date().getTime();
+                var distance = DgTarihi - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 *24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 *24))
+                / (1000 * 60 * 60));
+                var minutes= Math.floor((distance % (1000* 60* 60)) / 
+                (1000 * 60));
+                var seconds = Math.floor((distance % (1000* 60)) / 1000);
+                document.getElementById("demo").innerHTML= days + "Gün" + " " + hours + "Saat" + " " + minutes + "Dakika" + " " + seconds + "Saniye";
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML= "Doğum Günü Geçti";
+                }
+            }, 1000);
+        </script>
+    
+    </body> 
+</html>
