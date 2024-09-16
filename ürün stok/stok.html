@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ürün Stok Durumu Görüntüleme</title>
+        <style>
+            body{
+                background-color: rgb(213, 213, 203);
+            }
+            .list{
+                position: relative;
+                top: 60px;
+                left: 50px;
+                color: rgb(45, 11, 11);
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- <div id="myBtnContainer" >
+                <button class="button active" onclick="filterSelection(`all`)">Tüm Ürünleri Göster</button>
+                <button class="button" onclick="filterSelection(`stok var`)">Stokta Olan ürünler</button>
+                <button class="button" onclick="filterSelection(`stok yok`)">Stokta Olmayan ürünler</button>
+
+            </div> -->
+            <ul>
+                <li class="list">Çilek</li> <button id="button" onclick="MyButton">Stok durumunu ogren</button>
+                <li class="list">Karpuz</li>
+                <li class="list">Kiraz</li>
+                <li class="list">Şeftali</li>
+                <li class="list">Ananas</li>
+          </ul>
+           
+                 <p id="demo"></p>
+                 <p id="demo1"></p>
+            
+            <script>
+                const dummyLists = [
+                    { id: 1, name:"Çilek", stok:25}, 
+                    { id: 2, name:"Karpuz", stok:10},
+                    { id: 3, name:"Kiraz", stok:40},
+                    { id: 4, name:"Şeftali", stok:35},
+                    { id: 5, name:"Ananas", stok:30},
+
+                ];
+
+                async function filterStokMeyve() {
+                    try{
+                        console.log("ürünler filtreleniyor...");
+                        const StoktaOLanlar = dummyLists.filter(list => list.stok >= 30);
+                        // console.log("stokta olanlar", StoktaOLanlar);
+
+                    } catch (error){
+                       console.error("hata", error);
+                    }
+                }
+
+                function MyButton() {
+                    var x = document.getElementsByClassName("list", StoktaOLanlar).text;
+                    document.getElementById("demo").innerHTML= x;
+                    // var x = document.createElement("BUTTON");
+                    // var t = document.createTextNode("StoktaOLanlar");
+                    //  let html = document.getElementById("demo");
+                    
+                }
+
+
+
+
+                filterStokMeyve();
+            </script>
+        </div>
+    </body>
+</html>
