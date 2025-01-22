@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başvuru Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            display: none;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .form-container input, .form-container select, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .open-form-btn {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .open-form-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="open-form-btn" onclick="openForm()">Başvuru Formunu Aç</button>
+
+    <div class="form-container" id="formContainer">
+        <h2>Başvuru Formu</h2>
+        <form id="applicationForm">
+            <label for="firstName">Ad:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Soyad:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="gender">Cinsiyet:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Seçiniz</option>
+                <option value="male">Erkek</option>
+                <option value="female">Kadın</option>
+                <option value="other">Diğer</option>
+            </select>
+
+            <label for="birthDate">Doğum Tarihi:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+
+            <label for="address">Adres:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="fileUpload">Dosya Yükle:</label>
+            <input type="file" id="fileUpload" name="fileUpload" required>
+
+            <button type="submit">Kaydet ve Gönder</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById('formContainer').style.display = 'block';
+        }
+
+        document.getElementById('applicationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Formun gerçek gönderimini engelle
+            alert('Form başarıyla gönderildi!');
+        });
+    </script>
+
+</body>
+</html>
