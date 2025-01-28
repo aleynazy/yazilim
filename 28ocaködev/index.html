@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Yorum Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .container h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .comment-list {
+            margin-top: 20px;
+        }
+        .comment {
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .positive {
+            background-color: #d4edda;
+            border-left: 5px solid #155724;
+        }
+        .negative {
+            background-color: #f8d7da;
+            border-left: 5px solid #721c24;
+        }
+        .neutral {
+            background-color: #fff3cd;
+            border-left: 5px solid #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ürün Adı</h1>
+        <label for="rating">Puan Verin:</label>
+        <select id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="comment">Yorum Yazın:</label>
+        <textarea id="comment" placeholder="Yorumunuzu buraya yazın..."></textarea>
+
+        <label for="type">Yorum Türü:</label>
+        <select id="type">
+            <option value="positive">Olumlu</option>
+            <option value="negative">Olumsuz</option>
+            <option value="neutral">Nötr</option>
+        </select>
+
+        <button onclick="addComment()">Yorum Yap</button>
+
+        <label for="filter">Yorumları Filtrele:</label>
+        <select id="filter" onchange="filterComments()">
+            <option value="all">Tüm Yorumlar</option>
+            <option value="positive">Olumlu</option>
+            <option value="negative">Olumsuz</option>
+            <option value="neutral">Nötr</option>
+        </select>
+
+        <div class="comment-list" id="commentList"></div>
+    </div>
+
+    <script>
+        function addComment() {
+            const rating = document.getElementById("rating").value;
+            const commentText = document.getElementById("comment").value;
+            const type = document.getElementById("type").value;
+            const commentList = document.getElementById("commentList");
+
+            if (!commentText) {
+                alert("Lütfen bir yorum girin.");
+                return;
+            }
+
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment", type);
+            commentDiv.innerHTML = `<strong>Puan: ${rating}</strong><br>${commentText}
+                                    <br><button onclick="this.parentElement.remove()">Sil</button>`;
+
+            commentList.appendChild(commentDiv);
+
+            document.getElementById("comment").value = "";
+        }
+
+        function filterComments() {
+            const filter = document.getElementById("filter").value;
+            const comments = document.querySelectorAll(".comment");
+            
+            comments.forEach(comment => {
+                if (filter === "all" || comment.classList.contains(filter)) {
+                    comment.style.display = "block";
+                } else {
+                    comment.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
